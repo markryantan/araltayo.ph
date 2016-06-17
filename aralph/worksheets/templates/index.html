@@ -1,0 +1,26 @@
+<html>
+<head>
+	<link rel="stylesheet" href="../static/worksheets.css" type="text/css">
+</head>
+<body>
+	<div class="filter" data-filter="all">Show All</div>
+	<div class="filter" data-filter=".category-1">Category 1</div>
+	<div class="filter" data-filter=".category-2">Category 2</div>
+
+	<div class="sort" data-sort="default">Default</div>
+	<div class="sort" data-sort="myorder:asc">Ascending</div>
+	<div class="sort" data-sort="myorder:desc">Descending</div>
+	<div class="sort" data-sort="random">Random</div>
+
+	<div id="Container">
+		<div class="mix category-1" data-myorder="2">c1 2</div>
+		<div class="mix category-2" data-myorder="4">c2 4</div>
+		<div class="mix category-1" data-myorder="1">c1 1</div>
+		<div class="mix category-2" data-myorder="8">c2 8</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../static/jquery.mixitup.min.js"></script>
+	<script src="../static/worksheets.js"></script>
+</body>
+</html>
