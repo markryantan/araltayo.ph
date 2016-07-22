@@ -1,66 +1,411 @@
-<html>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link rel="stylesheet" href="../static/worksheets.css" type="text/css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Filipino Educational Web Portal" />
+    <meta name="author" content="Mark Ryan Tan" />
+    <title>Aral Tayo!</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+	<link href="../static/css/font-awesome.min.css" rel="stylesheet" />
+     <!-- FLEXSLIDER CSS -->
+	<link href="../static/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="../static/css/style.css" rel="stylesheet" />    
+  	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
 </head>
-<body>
-	<div class="filter" data-filter="all">Show All</div>
-	<br><br>
-	<div class="filter" data-filter=".subject-math">Math</div>
-	<div class="filter" data-filter=".subject-science">Science</div>
-	<div class="filter" data-filter=".subject-language">Language</div>
-	<br><br>
-	<div class="filter" data-filter=".grade-1">Grade 1</div>
-	<div class="filter" data-filter=".grade-2">Grade 2</div>
-	<div class="filter" data-filter=".grade-3">Grade 3</div>
-	<br><br>
-	<div class="filter" data-filter=".subject-math.grade-1">Math for Grade 1</div>
-	<br><br>
-	<div class="sort" data-sort="default">Default</div>
-	<div class="sort" data-sort="myorder:asc">Ascending</div>
-	<div class="sort" data-sort="myorder:desc">Descending</div>
-	<div class="sort" data-sort="random">Random</div>
-	<br><br>
-	<div id="Container">
-		<div class="asset mix subject-math grade-1" data-myorder="1.1.1">
-			<img src="../static/img/math.png">
-			<div class="desc">math - grade 1</div>
+<body >
+	<div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand" href="#"><img class="logo-custom" src="../static/img/araltayo-logo.png" alt=""  /></a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#worksheets-sec">WORKSHEETS</a></li>
+                    <li><a href="#videos-sec">VIDEOS</a></li>
+                    <li><a href="#quizzes-sec">QUIZZES</a></li>
+                    <!-- <li><a href="#features-sec">FEATURES</a></li> -->
+                    <li><a href="#faculty-sec">FACULTY</a></li>
+                    <!-- <li><a href="#course-sec">COURSES</a></li> -->
+                    <li><a href="#contact-sec">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- menu -->
+    
+    <div class="home-sec" id="home">
+    	<div class="overlay">
+    		<div class="container">
+    			<div class="row text-center">
+    				<div class="col-lg-12 col-md-12 col-sm-12">
+    					<div class="row home-sec-top">
+    						<div class="col-lg-4 col-md-4 col-sm-4">
+    							<img src="../static/img/big-logo.png" class="img-rounded img-center" style="padding-top: 20px;"/>
+    						</div>
+    						<div class="col-lg-8  col-md-4 col-sm-8">
+			    				<h1>Halina at mag-aral tayo!</h1>
+								<h4>Dito sa araltayo.ph, nais naming makatulong sa mga batang Pinoy upang mapadali at mapasaya ang kanilang pag-aaral.</h4>
+								<h4>Mayroon kaming mga nakahandang PRINTABLE WORKSHEETS o mga pagsasanay na maaring nang sagutan.</h4>
+								<h4>Mayroon ding kaming mga VIDEO TUTORIALS na nagtuturo ng iba't ibang paksa sa Filipino at Araling Panlipunan.</h4>
+								<h4>Pagkatapos magsagot ng Worksheet o manood ng Video Tutorial, maari ring magsagot ng aming mga ONLINE QUIZZES upang mas mahasa pa ang inyong kaalaman.</h4>
+							</div>
+						</div>
+    				
+    					<div class="flexslider set-flexi" id="main-section">
+    						<ul class="slides move-me">
+	    						<!-- Slider 01 -->
+	    						<li>
+	    							<h2>PRINTABLE WORKSHEETS</h2>
+	    							<h5>Describe printable worksheets</h5>
+	    							<a href="#worksheets-sec" class="btn btn-info btn-lg">TARA! ARAL TAYO!</a>
+	    						</li>
+	    						<!-- End Slider 01 -->
+	    						
+	    						<!-- Slider 02 -->
+	    						<li>
+	    							<h2>VIDEO TUTORIALS</h2>
+	    							<h5>Describe video tutorials</h5>
+	    							<a href="#videos-sec" class="btn btn-warning btn-lg">TARA! ARAL TAYO!</a>
+	    						</li>
+	    						<!-- End Slider 02 -->
+	    						
+	    						<!-- Slider 03 -->
+	    						<li>
+	    							<h2>ONLINE QUIZZES</h2>
+	    							<h5>Describe online quizzes</h5>
+	    							<a href="#quizzes-sec" class="btn btn-danger btn-lg">TARA! ARAL TAYO!</a>
+	    						</li>
+	    						<!-- End Slider 03 -->
+    						</ul>
+    					</div> <!-- main-section -->
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div> <!-- home -->
+    <!-- 
+    <div class="tag-line" >
+    	<div class="container">
+    		<div class="row text-center">
+    			<div class="col-lg-12 col-md-12 col-sm-12">
+    				<h2 data-scroll-reveal="enter from the bottom after 0.1s" ><i class="fa fa-circle-o-notch"></i> WELCOME TO THE EDU-CENTER <i class="fa fa-circle-o-notch"></i></h2>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    -->
+    
+	<div id="worksheets-sec" >
+		<div class="container set-pad">
+			<div class="row text-center">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+					<h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">WORKSHEETS</h1>
+					<p data-scroll-reveal="enter from the bottom after 0.3s">
+						Mayroong mga pagsasanay para sa iba't ibang asignatura at antas. (Preschool at Elementary).
+						<br>
+						Lahat ng mga pagsasanay ay naka-PDF Format!
+					</p>
+				</div>
+			</div>
+			<!--/.HEADER LINE END-->
+			<div class="row text-center">
+			--- WORKSHEETS GO HERE ---
+			</div>
 		</div>
-		<div class="asset mix subject-science grade-1" data-myorder="2.1.1">
-			<img src="../static/img/science.png">
-			<div class="desc">science - grade 1</div>
+	</div><!-- WORKSHEETS SEC-->
+    
+    
+    <div id="videos-sec" class="container set-pad">
+    	<div class="row text-center">
+    		<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+    			<h1 data-scroll-reveal="enter from the bottom after 0.2s"  class="header-line">VIDEO TUTORIALS</h1>
+    			<p data-scroll-reveal="enter from the bottom after 0.3s">
+    			May mga batang visual learners, o mas madaling matuto sa pamamagitan ng kanilang mga nakikita. 
+    			<br>
+    			Sa pamamagitan ng aming mga maikling videos, may iba't ibang aralin sa Filipino at Araling Panlipunan na mas madaling maiintindahan ng mga batang mag-aaral. 
+    			</p>
+    		</div>
+    	</div>
+    	
+    	<div class="row text-center">
+			--- VIDEOS GO HERE ---
 		</div>
-		<div class="asset mix subject-language grade-1" data-myorder="3.1.1">
-			<img src="../static/img/language.png">
-			<div class="desc">language - grade 1</div>
+    </div>
+    
+    <div id="quizzes-sec" >
+		<div class="container set-pad">
+			<div class="row text-center">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+					<h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">ONLINE QUIZZES</h1>
+					<p data-scroll-reveal="enter from the bottom after 0.3s">
+						Subukin ang iyong kaalaman sa pamamagitan ng pagsagot sa aming mga maikling pagsusulit!
+					</p>
+				</div>
+			</div>
+			<!--/.HEADER LINE END-->
+			<div class="row text-center">
+			--- QUIZZES GO HERE ---
+			</div>
 		</div>
-		<div class="asset mix subject-math grade-2" data-myorder="1.2.1">
-			<img src="../static/img/math.png">
-			<div class="desc">math - grade 2</div>
+	</div><!-- WORKSHEETS SEC-->
+    
+    <!--
+    <div id="features-sec" class="container set-pad">
+    	<div class="row text-center">
+    		<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+    			<h1 data-scroll-reveal="enter from the bottom after 0.2s"  class="header-line">FEATURE LIST</h1>
+    			<p data-scroll-reveal="enter from the bottom after 0.3s" >
+    			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.
+    			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.
+    			</p>
+    		</div>
+    	</div>
+    	
+    	<div class="row">
+    		<div class="col-lg-4 col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+    			<div class="about-div">
+    				<i class="fa fa-paper-plane-o fa-4x icon-round-border"></i>
+    				<h3>Quality Education</h3>
+					<hr/><hr/>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p>
+					<a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
+                </div>
+            </div>
+			<div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+				<div class="about-div">
+					<i class="fa fa-bolt fa-4x icon-round-border"></i>
+					<h3>SYSTEMATIC APPROACH</h3>
+					<hr/><hr/>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p>
+					<a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
+                </div>
+			</div>
+			<div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+				<div class="about-div">
+					<i class="fa fa-magic fa-4x icon-round-border" ></i>
+					<h3>ONE TO ONE STUDY</h3>
+					<hr/><hr/>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p>
+					<a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
+                </div>
+			</div>
 		</div>
-		<div class="asset mix subject-science grade-2" data-myorder="2.2.1">
-			<img src="../static/img/science.png">
-			<div class="desc">science - grade 2</div>
-		</div>
-		<div class="asset mix subject-language grade-2" data-myorder="3.2.1">
-			<img src="../static/img/language.png">
-			<div class="desc">language - grade 2</div>
-		</div>
-		<div class="asset mix subject-math grade-3" data-myorder="1.3.1">
-			<img src="../static/img/math.png">
-			<div class="desc">math - grade 3</div>
-		</div>
-		<div class="asset mix subject-science grade-3" data-myorder="2.3.1">
-			<img src="../static/img/science.png">
-			<div class="desc">science - grade 3</div>
-		</div>
-		<div class="asset mix subject-language grade-3" data-myorder="3.3.1">
-			<img src="../static/img/language.png">
-			<div class="desc">language - grade 3</div>
+	</div> 
+	-->
+    
+	<div id="faculty-sec">
+		<div class="container set-pad">
+			<div class="row text-center">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+					<h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR FACULTY</h1>
+					<p data-scroll-reveal="enter from the bottom after 0.3s">
+					Ang staff ng Aral Tayo!
+					</p>
+				</div>
+			</div>
+             <!--/.HEADER LINE END-->
+			
+			<div class="row">
+				<div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+					<div class="faculty-div">
+						<img src="../static/img/abi.jpg" class="img-rounded"/>
+						<h3>ABI TAN</h3>
+						<hr/>
+						<h4>Materials and Resources<br/>Department</h4>
+						<p>Teacher Abi is a graduate of Library and Information Science from UP Diliman. She taught English in high school for a year but soon discovered that it was so difficult working with older kids particularly if they spent years not being motivated in school. She then decided to teach in preschool. She worked at Little Archers for five years before switcing to private tutoring to be able to spend more time with her "little man". She has been working as a private tutor slash playmate slash yaya to her "babies" for nearly five years now. During that time, she has accrued a cabinetful of materials which she thinks will benefit other students. This is the reason why she decided to create teacherabiworksheets. Plus, posting the worksheets online makes it easier for her to retrieve materials in case she forgets to print out the ones that she needs to use for that day.</p>
+                	</div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+					<div class="faculty-div">
+						<img src="../static/img/kit.jpg" class="img-rounded"/>
+						<h3>Kitten Macawili</h3>
+						<hr/>
+						<h4>Assets and Graphics<br/>Department</h4>
+						<p>Teacher Kitten is a graduate of Civil Engineering from UP Diliman. Ewan ko nga bakit andito sya ngayon. Lol. She is a juan of all trades and soon to be master of Family Life and Child Development (cross-fingers!). She loves to dabble in art and design, so she really enjoyed creating this website and helping A1 and A2 evolve from stick figures.</p>
+                	</div>
+				</div>
+				<div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+					<div class="faculty-div">
+						<img src="../static/img/mark.jpg" class="img-rounded"/>
+						<h3>Mark Tan</h3>
+						<hr/>
+						<h4>Technical<br/>Department</h4>
+						<p>Teacher Mark is a graduate of Computer Science from UP Diliman. He is not really a teacher, pero nakaka-OP kaya teacher na rin itawag natin sa kanya. He is in charge of website maintenance and technical support. Pag may nagloloko sa site, siya ang i-memessage natin.</p>
+                	</div>
+				</div>
+			</div>
 		</div>
 	</div>
+    <!-- FACULTY SECTION END-->
+    <!--
+      <div id="course-sec" class="container set-pad">
+             <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR COURSES </h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo.
+                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo.
+                         </p>
+                 </div>
 
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="../static/jquery.mixitup.min.js"></script>
-	<script src="../static/worksheets.js"></script>
+             </div>
+
+
+           <div class="row set-row-pad" >
+           <div class="col-lg-6 col-md-6 col-sm-6 " data-scroll-reveal="enter from the bottom after 0.4s" >
+                 <img src="../static/img/building.jpg" class="img-thumbnail" />
+           </div>
+               <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                   <div class="panel-group" id="accordion">
+                        <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.5s">
+                            <div class="panel-heading" >
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
+                                  <strong>   350+</strong> DESIGNING COURSES 
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget tincidunt est.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.7s">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+                                      <strong>   250+</strong> ENGINEERING COURSES 
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body">
+                                    <p>
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget tincidunt est.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.9s">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+                                        <strong>   153+</strong> MANAGEMENT COURSES 
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse"  style="height: 0px;">
+                                <div class="panel-body">
+                                    <p>
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget tincidunt est.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="alert alert-info" data-scroll-reveal="enter from the bottom after 1.1s" >
+                       <span style="font-size:40px;">
+                          <strong> 2500 + </strong> 
+                           <hr />
+                           Centers
+                       </span>
+                   </div>
+           </div>
+             
+                 
+                 
+               </div>
+             </div>
+    -->         
+	<!-- COURSES SECTION END-->
+	<div id="contact-sec"   >
+		<div class="overlay">
+			<div class="container set-pad">
+				<div class="row text-center">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+						<h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >CONTACT US</h1>
+						<p data-scroll-reveal="enter from the bottom after 0.3s">
+						Kung meron kayong gustong ipagawa na worksheet, video, o reviewer, o kung may gusto kayo itanong, ipadala nyo lang gamit ng feedback form sa baba.
+						</p>
+					</div>
+				</div>
+				<!--/.HEADER LINE END-->
+				<div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control " data-validation="alphanumeric" required="required" placeholder="Your Name" />
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control " data-validation="email" required="required"  placeholder="Your Email" />
+							</div>
+							<div class="form-group">
+								<textarea name="message" required="required" class="form-control" style="min-height: 150px;" placeholder="Message"></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+	<div class="container">
+		<div class="row set-row-pad"  >
+			<div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+				<h2><strong>Our Location</strong></h2>
+				<hr/>
+				<div>
+					<!-- 
+					<h4>234/80 -UFG , New Street,</h4>
+					<h4>Switzerland.</h4>
+					 -->
+					<h4><strong>SMS/Viber: </strong>  + 63-999-888-8881 / 82 / 83 </h4>
+					<h4><strong>Email: </strong>info@araltayo.ph</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+				<h2 ><strong>Social Conectivity </strong></h2>
+				<hr />
+				<div >
+					<a href="#"> <img src="../static/img/Social/facebook.png" alt="" /> </a>
+					<a href="#"> <img src="../static/img/Social/google-plus.png" alt="" /></a>
+					<a href="#"> <img src="../static/img/Social/twitter.png" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+     <!-- CONTACT SECTION END-->
+    <div id="footer">
+          &copy 2016 araltayo.ph | All Rights Reserved |  <a href="http://binarytheme.com" style="color: #fff" target="_blank">Design by : binarytheme.com</a>
+    </div>
+     <!-- FOOTER SECTION END-->
+   
+    <!--  Jquery Core Script -->
+    <script src="../static/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="../static/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts --> 
+         <script src="../static/js/jquery.flexslider.js"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="../static/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts --> 
+    <script src="../static/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts --> 
+         <script src="../static/js/custom.js"></script>
 </body>
 </html>

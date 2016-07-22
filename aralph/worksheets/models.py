@@ -57,7 +57,7 @@ class Asset(models.Model):
 	
 	subject = models.IntegerField(
 		choices=SUBJECTS,
-		default = SCIENCE,
+		default=SCIENCE,
 		)
 	
 	thumbnail = models.ImageField()
