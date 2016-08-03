@@ -4,7 +4,7 @@ from django.db import models
 
 # Create your models here.
 
-class Asset(models.Model):
+class Material(models.Model):
 	
 	LESSON = 1
 	WORKSHEET = 2
@@ -32,6 +32,22 @@ class Asset(models.Model):
         (ARALING_PANLIPUNAN, 'Araling Panlipunan'),
     )
 	
+	LEVELS = (
+        (0, 'K'),
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+        (6, '6'),
+        (7, '7'),
+        (8, '8'),
+        (9, '9'),
+        (10, '10'),
+        (11, '11'),
+        (12, '12'),
+    )
+	
 	
 	title = models.CharField(
         max_length=100,
@@ -43,7 +59,6 @@ class Asset(models.Model):
 	
 	link = models.SlugField(
         max_length=50,
-        unique=True,
         )
 	
 	type = models.IntegerField(
@@ -52,6 +67,7 @@ class Asset(models.Model):
         )
 	
 	level = models.IntegerField(
+		choices=LEVELS,
 		default=0,
 		)
 	
@@ -60,7 +76,11 @@ class Asset(models.Model):
 		default=SCIENCE,
 		)
 	
-	thumbnail = models.ImageField()
+	thumbnail = models.ImageField(
+		blank=True,
+        null=True,
+        default=None,
+	)
 	
 	created = models.DateTimeField(auto_now_add=True)
 	
