@@ -6,15 +6,11 @@
     <meta name="description" content="Filipino Educational Web Portal" />
     <meta name="author" content="Mark Ryan Tan" />
     <title>Aral Tayo!</title>
-    <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="../static/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME CSS -->
 	<link href="../static/css/font-awesome.min.css" rel="stylesheet" />
-     <!-- FLEXSLIDER CSS -->
 	<link href="../static/css/flexslider.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE CSS -->
-    <link href="../static/css/style.css" rel="stylesheet" />    
-  	<!-- Google Fonts -->
+    <link href="../static/css/style.css" rel="stylesheet" />
+    <link href="../static/css/worksheets.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
 </head>
 <body >
@@ -118,8 +114,66 @@
 				</div>
 			</div>
 			<!--/.HEADER LINE END-->
-			<div class="row text-center">
-			--- WORKSHEETS GO HERE ---
+			<div class="row">
+				<div class="filter" data-filter="all"><a>Show All</a></div>
+				<div class="filter" data-filter=".subject-math"><a>Math</a></div>
+				<div class="filter" data-filter=".subject-science"><a>Science</a></div>
+				<div class="filter" data-filter=".subject-language"><a>Language</a></div>
+				<div class="filter" data-filter=".grade-1">Grade 1</div>
+				<div class="filter" data-filter=".grade-2">Grade 2</div>
+				<div class="filter" data-filter=".grade-3">Grade 3</div>
+				<div class="filter" data-filter=".subject-math.grade-1">Math for Grade 1</div>
+				<div class="sort" data-sort="default">Default</div>
+				<div class="sort" data-sort="myorder:asc">Ascending</div>
+				<div class="sort" data-sort="myorder:desc">Descending</div>
+				<div class="sort" data-sort="random">Random</div>
+			</div>
+			<div id="mix-container" class="row text-center">
+				<div class="mix-asset mix mix-tooltip subject-math grade-1" data-myorder="1.1.1">
+					<img src="../static/img/math.png">
+					<div class="desc">math - grade 1</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-science grade-1" data-myorder="2.1.1">
+					<img src="../static/img/science.png">
+					<div class="desc">science - grade 1</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-language grade-1" data-myorder="3.1.1">
+					<img src="../static/img/language.png">
+					<div class="desc">language - grade 1</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-math grade-2" data-myorder="1.2.1">
+					<img src="../static/img/math.png">
+					<div class="desc">math - grade 2</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-science grade-2" data-myorder="2.2.1">
+					<img src="../static/img/science.png">
+					<div class="desc">science - grade 2</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-language grade-2" data-myorder="3.2.1">
+					<img src="../static/img/language.png">
+					<div class="desc">language - grade 2</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-math grade-3" data-myorder="1.3.1">
+					<img src="../static/img/math.png">
+					<div class="desc">math - grade 3</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-science grade-3" data-myorder="2.3.1">
+					<img src="../static/img/science.png">
+					<div class="desc">science - grade 3</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
+				<div class="mix-asset mix mix-tooltip subject-language grade-3" data-myorder="3.3.1">
+					<img src="../static/img/language.png">
+					<div class="desc">language - grade 3</div>
+					<span class="mix-tooltiptext">Short description of the topic</span>
+				</div>
 			</div>
 		</div>
 	</div><!-- WORKSHEETS SEC-->
@@ -395,17 +449,13 @@
     </div>
      <!-- FOOTER SECTION END-->
    
-    <!--  Jquery Core Script -->
     <script src="../static/js/jquery-1.10.2.js"></script>
-    <!--  Core Bootstrap Script -->
     <script src="../static/js/bootstrap.js"></script>
-    <!--  Flexslider Scripts --> 
-         <script src="../static/js/jquery.flexslider.js"></script>
-     <!--  Scrolling Reveal Script -->
-    <script src="../static/js/scrollReveal.js"></script>
-    <!--  Scroll Scripts --> 
+    <script src="../static/js/jquery.mixitup.min.js"></script>
+	<script src="../static/js/jquery.flexslider.js"></script>
+    <script src="../static/js/scrollReveal.js"></script> 
     <script src="../static/js/jquery.easing.min.js"></script>
-    <!--  Custom Scripts --> 
-         <script src="../static/js/custom.js"></script>
+	<script src="../static/js/custom.js"></script>
+	<script src="../static/js/worksheets.js"></script>
 </body>
 </html>
