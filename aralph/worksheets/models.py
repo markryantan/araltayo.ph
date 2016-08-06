@@ -6,14 +6,14 @@ from django.db import models
 
 class Material(models.Model):
 	
-	LESSON = 1
-	WORKSHEET = 2
-	GUIDE = 3
+	WORKSHEET = 1
+	VIDEO = 2
+	QUIZ = 3
 	
 	ASSET_TYPES = (
-        (LESSON, 'Lesson'),
         (WORKSHEET, 'Worksheet'),
-        (GUIDE, 'Guide'),
+        (VIDEO, 'Video Tutorial'),
+        (QUIZ, 'Quiz'),
     )
 	
 	SCIENCE = 1
@@ -63,7 +63,7 @@ class Material(models.Model):
 	
 	type = models.IntegerField(
         choices=ASSET_TYPES,
-        default=LESSON,
+        default=WORKSHEET,
         )
 	
 	level = models.IntegerField(
@@ -80,9 +80,11 @@ class Material(models.Model):
 		blank=True,
         null=True,
         default=None,
-	)
+		)
 	
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(
+		auto_now_add=True
+		)
 	
 	updated = models.DateTimeField(auto_now=True)
 	

@@ -11,7 +11,7 @@
 	<link href="../static/css/flexslider.css" rel="stylesheet" />
     <link href="../static/css/style.css" rel="stylesheet" />
     <link href="../static/css/worksheets.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+	<link href='../static/css/font.css' rel='stylesheet' type='text/css' />
 </head>
 <body >
 	<div class="navbar navbar-inverse navbar-fixed-top " id="menu">
@@ -114,66 +114,107 @@
 				</div>
 			</div>
 			<!--/.HEADER LINE END-->
-			<div class="row">
-				<div class="filter" data-filter="all"><a>Show All</a></div>
-				<div class="filter" data-filter=".subject-math"><a>Math</a></div>
-				<div class="filter" data-filter=".subject-science"><a>Science</a></div>
-				<div class="filter" data-filter=".subject-language"><a>Language</a></div>
-				<div class="filter" data-filter=".grade-1">Grade 1</div>
-				<div class="filter" data-filter=".grade-2">Grade 2</div>
-				<div class="filter" data-filter=".grade-3">Grade 3</div>
-				<div class="filter" data-filter=".subject-math.grade-1">Math for Grade 1</div>
-				<div class="sort" data-sort="default">Default</div>
-				<div class="sort" data-sort="myorder:asc">Ascending</div>
-				<div class="sort" data-sort="myorder:desc">Descending</div>
-				<div class="sort" data-sort="random">Random</div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="btn-group">
+					<div class="dropdown btn btn-group">
+	  					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuSubject" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    					Subject
+	    					<span class="caret"></span>
+	  					</button>
+	  					<ul class="dropdown-menu" aria-labelledby="dropdownMenuSubject">
+	    					<li><a><div class="filter" data-filter=".subject-1">Science</div></a></li>
+	    					<li><a><div class="filter" data-filter=".subject-2">Math</div></a></li>
+	    					<li><a><div class="filter" data-filter=".subject-3">Language</div></a></li>
+	    					<li><a><div class="filter" data-filter=".subject-4">Reading</div></a></li>
+	    					<li><a><div class="filter" data-filter=".subject-5">Filipino</div></a></li>
+	    					<li><a><div class="filter" data-filter=".subject-6">Araling Panlipunan</div></a></li>
+	  					</ul>
+					</div>
+					
+					<div class="dropdown btn btn-group">
+	  					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuLevel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    					Level
+	    					<span class="caret"></span>
+	  					</button>
+	  					<ul class="dropdown-menu" aria-labelledby="dropdownMenuLevel">
+	    					<li><a><div class="filter" data-filter=".level-0">K</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-1">1</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-2">2</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-3">3</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-4">4</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-5">5</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-6">6</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-7">7</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-8">8</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-9">9</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-10">10</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-11">11</div></a></li>
+	    					<li><a><div class="filter" data-filter=".level-12">12</div></a></li>
+	  					</ul>
+					</div>
+					
+					<div class="btn btn-group">
+						<div class="filter" data-filter="all"><button type="button" class="btn btn-default">Show all</button></div>
+					</div>
+				</div>
 			</div>
 			<div id="mix-container" class="row text-center">
+				{% for worksheet in worksheets %}
+					<div class="mix-asset mix mix-tooltip subject-{{ worksheet.subject}} level-{{ worksheet.level }}" data-hits="{{ worksheet.hits }}" data-created="{{ worksheet.created|date:'Y-m-d-H-i-s' }}" data-updated="{{ worksheet.updated|date:'Y-m-d-H-i-s' }}">
+						<img src="../static/img/{{ worksheet.subject }}.png">
+						<div class="desc">{{ worksheet.title }}</div>
+						<span class="mix-tooltiptext">{{ worksheet.description }}</span>
+					</div>
+				{% endfor %}
+			
+				{% comment %}
 				<div class="mix-asset mix mix-tooltip subject-math grade-1" data-myorder="1.1.1">
-					<img src="../static/img/math.png">
+					<img src="../static/img/2.png">
 					<div class="desc">math - grade 1</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-science grade-1" data-myorder="2.1.1">
-					<img src="../static/img/science.png">
+					<img src="../static/img/1.png">
 					<div class="desc">science - grade 1</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-language grade-1" data-myorder="3.1.1">
-					<img src="../static/img/language.png">
+					<img src="../static/img/3.png">
 					<div class="desc">language - grade 1</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-math grade-2" data-myorder="1.2.1">
-					<img src="../static/img/math.png">
+					<img src="../static/img/2.png">
 					<div class="desc">math - grade 2</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-science grade-2" data-myorder="2.2.1">
-					<img src="../static/img/science.png">
+					<img src="../static/img/1.png">
 					<div class="desc">science - grade 2</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-language grade-2" data-myorder="3.2.1">
-					<img src="../static/img/language.png">
+					<img src="../static/img/3.png">
 					<div class="desc">language - grade 2</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-math grade-3" data-myorder="1.3.1">
-					<img src="../static/img/math.png">
+					<img src="../static/img/2.png">
 					<div class="desc">math - grade 3</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-science grade-3" data-myorder="2.3.1">
-					<img src="../static/img/science.png">
+					<img src="../static/img/1.png">
 					<div class="desc">science - grade 3</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
 				<div class="mix-asset mix mix-tooltip subject-language grade-3" data-myorder="3.3.1">
-					<img src="../static/img/language.png">
+					<img src="../static/img/3.png">
 					<div class="desc">language - grade 3</div>
 					<span class="mix-tooltiptext">Short description of the topic</span>
 				</div>
+				
+				{% endcomment %}
 			</div>
 		</div>
 	</div><!-- WORKSHEETS SEC-->
